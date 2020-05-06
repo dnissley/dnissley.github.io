@@ -30,7 +30,6 @@ const IndexPage = () => (
     <h2>What I'm About</h2>
     <ul className="star-bullet">
       <li>Thinking like a founder/owner.</li>
-      <li>Focusing on business value.</li>
       <li>Making customers feel like badasses.</li>
       <li>Not getting distracted.</li>
       <li>Sticking to priorities ruthlessly.</li>
