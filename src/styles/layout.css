@@ -1,0 +1,97 @@
+/* GLOBAL */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Crimson Text", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 20px;
+  background: #f9f9f9;
+  color: black;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+/* HEADER */
+
+header {
+  padding: 1em 0;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+/* CONTENT */
+
+html, body, #container {
+  height: 100%;
+  min-height: 100vh;
+}
+
+#container {
+  border-left: 2px dashed black;
+  padding: 0 1em;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
+}
+
+main p {
+  margin-bottom: 1em;
+}
+
+ul {
+  margin-bottom: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+li:before {
+  content: '•';
+  margin-left: 1em;
+  margin-right: 0.5em;
+}
+
+.fleur-bullet li:before {
+  font-family: "Wingdings 2";
+  content: 'a';
+}
+
+.star-bullet li:before {
+  content: '✶';
+}
+
+.fancy-bullet li:before {
+  font-family: "Wingdings 2";
+  content: 'e';
+}

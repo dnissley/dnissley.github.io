@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Italic.ttf");
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Wingdings 2";
+  src: url("../fonts/Wingdings2.ttf");
+}
