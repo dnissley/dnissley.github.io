@@ -1,9 +1,92 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import portrait from "../images/me.jpg"
+
+const email = "dylan.nissley@gmail.com"
+
+const phone = {
+  linkFormat: "1-317-238-0418",
+  humanFormat: "(317) 238-0418",
+}
+
+const principles = [
+  "Thinking like a founder/owner.",
+  "Making customers feel like badasses.",
+  "Not getting distracted.",
+  "Sticking to priorities ruthlessly.",
+  "Being a smelly tradesman, not a pretentious artisan.",
+  "Developing software progressively, in the image loading sense.",
+  "Being an anti-perfectionist.",
+  "Believing in data, but being skeptical of interpretations.",
+  "Experimenting before I commit.",
+  "Reasonably thorough domain modeling.",
+  "Balancing YAGNI with not painting oneself into a corner.",
+  "Wrestling with messy code.",
+  "Getting tests in place for important stuff.",
+  "Writing code that blends in to it's natural environment.",
+  "... And then evolving that environment.",
+  "Not being a slave to principles.",
+]
+
+const jobs = [
+  {
+    orgName: "Bluecrew",
+    startYear: "2019",
+    endYear: "Present",
+    description: [
+      "Jobs marketplace -- think Uber for warehouse, food prep, and other low skill jobs",
+      "Working primarily on the employer side of the app, doing backend API work",
+      "Full stack JS + MySQL + Redis",
+    ],
+  },
+  {
+    orgName: "Angie's List",
+    startYear: "2014",
+    endYear: "2019",
+    description: [
+      "Search, ratings, and reviews for home service providers",
+      "Assisted with migration from legacy C# to modern Scala + JS stack",
+      "Worked on communications infrastructure: Email + SMS + Push Notifications",
+      "JS + Java + Scala + C# + MySQL + MS SQL Server + Redis + Elasticsearch + Kafka",
+    ],
+  },
+  {
+    orgName: "EZ Software",
+    startYear: "2007",
+    endYear: "2014",
+    description: [
+      "Restaurant and retail point of sale software",
+      "Integrated hardware: pole displays, scales, barcode scanners, payment terminals",
+      "Integrated software: payment gateways, quickbooks",
+      "VB6 + C# + MySQL",
+    ],
+  },
+]
+
+const WorkHistoryItem = ({ job }) => (
+  <li>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "baseline",
+      }}
+    >
+      <h3>{job.orgName}</h3>
+      <hr style={{ flexGrow: 1 }} />
+      <div>
+        {job.startYear} to {job.endYear}
+      </div>
+    </div>
+    <ul className="fancy-bullet" style={{ padding: "0.5em 0em" }}>
+      {job.description.map(bullet => (
+        <li>{bullet}</li>
+      ))}
+    </ul>
+  </li>
+)
 
 const IndexPage = () => (
   <Layout showHeader={false} style={{ paddingTop: "1em" }}>
@@ -18,40 +101,26 @@ const IndexPage = () => (
     <h1>Dylan Nissley - Software Engineer</h1>
     <ul className="fleur-bullet">
       <li>
-        Email Address:{" "}
-        <a href="mailto:dylan.nissley@gmail.com">dylan.nissley@gmail.com</a>
+        Email: <a href={`mailto:${email}`}>{email}</a>
       </li>
       <li>
-        Phone Number: <a href="tel:1-317-238-0418">(317) 238-0418</a>
+        Phone: <a href={`tel:${phone.linkFormat}`}>{phone.humanFormat}</a>
       </li>
       <li>Location: Chicago, IL</li>
     </ul>
 
-    <h2>What I'm About</h2>
+    <h2 style={{ marginTop: "2em" }}>What I'm About</h2>
     <ul className="star-bullet">
-      <li>Thinking like a founder/owner.</li>
-      <li>Making customers feel like badasses.</li>
-      <li>Not getting distracted.</li>
-      <li>Sticking to priorities ruthlessly.</li>
-      <li>Being a smelly tradesman, not a pretentious artisan.</li>
-      <li>Developing software progressively, in the image loading sense.</li>
-      <li>Being an anti-perfectionist.</li>
-      <li>Believing in data, but being skeptical of interpretations.</li>
-      <li>Experimenting before I commit.</li>
-      <li>Reasonably thorough domain modeling.</li>
-      <li>Balancing YAGNI with not painting oneself into a corner.</li>
-      <li>Wrestling with messy code.</li>
-      <li>Getting tests in place for important stuff.</li>
-      <li>Writing code that blends in to it's natural environment.</li>
-      <li>... And then evolving that environment.</li>
-      <li>Not being a slave to principles.</li>
+      {principles.map(p => (
+        <li>{p}</li>
+      ))}
     </ul>
 
-    <h2>Work Experience</h2>
-    <ul className="fancy-bullet">
-      <li>Bluecrew</li>
-      <li>Angie's List</li>
-      <li>EZ Software</li>
+    <h2 style={{ margin: "2em 0 1em" }}>Work Experience</h2>
+    <ul className="no-bullet">
+      {jobs.map(job => (
+        <WorkHistoryItem job={job} />
+      ))}
     </ul>
   </Layout>
 )

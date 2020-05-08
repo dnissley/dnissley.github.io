@@ -27,6 +27,11 @@ h2 {
   margin-bottom: 0.5em;
 }
 
+h3 {
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
 strong {
   font-weight: bold;
 }
@@ -48,16 +53,8 @@ header a {
 
 /* CONTENT */
 
-html, body, #container {
-  height: 100%;
-  min-height: 100vh;
-}
-
 #container {
-  border-left: 2px dashed black;
-  padding: 0 1em;
-  max-width: 960px;
-  margin: 0 auto;
+  padding: 0 0.5em;
 }
 
 main {
@@ -65,33 +62,85 @@ main {
 }
 
 main p {
-  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.wingding {
+  font-family: "Wingdings 2";
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: auto 1em;
+  border-bottom: 2px dashed #999;
+  padding-top: 5px;
 }
 
 ul {
-  margin-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 li {
-  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.no-bullet li {
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.fleur-bullet li, .star-bullet li, .fancy-bullet li {
+  padding-left: 2.25em;
+  text-indent: -2.25em;
 }
 
 li:before {
   content: '•';
-  margin-left: 1em;
-  margin-right: 0.5em;
+  padding-right: 0.5em;
+}
+
+.no-bullet li:before {
+  content: '';
+  padding-right: 0;
 }
 
 .fleur-bullet li:before {
   font-family: "Wingdings 2";
   content: 'a';
+  padding-right: 0.5em;
 }
 
 .star-bullet li:before {
   content: '✶';
+  padding-right: 0.5em;
 }
 
 .fancy-bullet li:before {
   font-family: "Wingdings 2";
   content: 'e';
+  padding-right: 0.5em;
+}
+
+@media only screen and (min-width: 600px) {
+  html, body, #container {
+    height: 100%;
+    min-height: 100vh;
+  }
+
+  #container {
+    padding: 0 1em;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  ul {
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #container {
+    border-left: 2px dashed #999;
+  }
 }
