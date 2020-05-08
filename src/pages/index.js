@@ -27,7 +27,7 @@ const principles = [
   "Getting tests in place for important stuff.",
   "Writing code that blends in to it's natural environment.",
   "... And then evolving that environment.",
-  "Not being a slave to principles.",
+  "Not being a slave to principles or conventions.",
 ]
 
 const jobs = [
