@@ -40,6 +40,11 @@ i {
   font-style: italic;
 }
 
+hr {
+  border: 0;
+  border-bottom: 2px dashed #999;
+}
+
 /* HEADER */
 
 header {
@@ -54,7 +59,7 @@ header a {
 /* CONTENT */
 
 #container {
-  padding: 0 0.5em;
+  padding: 1em 0.5em 0 0.5em;
 }
 
 main {
@@ -65,13 +70,7 @@ main p {
   padding-bottom: 1em;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  margin: auto 1em;
-  border-bottom: 2px dashed #999;
-  padding-top: 5px;
-}
+
 
 ul {
   padding-bottom: 1em;
@@ -86,9 +85,9 @@ li {
   text-indent: 0;
 }
 
-.fleur-bullet li, .star-bullet li, .fancy-bullet li {
-  padding-left: 2.25em;
-  text-indent: -2.25em;
+li, .four-point-star-bullet li, .six-point-star-bullet li, .arrowhead-bullet li {
+  padding-left: 2em;
+  text-indent: -2em;
 }
 
 li:before {
@@ -112,6 +111,7 @@ li:before {
 }
 
 .arrowhead-bullet li:before {
+  font-size: 0.75em;
   content: '➤';
   padding-right: 0.5em;
 }
@@ -123,7 +123,7 @@ li:before {
   }
 
   #container {
-    padding: 0 1em;
+    padding: 1em 1em 0 1em;
     max-width: 900px;
     margin: 0 auto;
   }

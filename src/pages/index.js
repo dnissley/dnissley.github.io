@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import portrait from "../images/me.jpg"
@@ -28,6 +28,10 @@ const principles = [
   "Writing code that blends in to it's natural environment.",
   "... And then evolving that environment.",
   "Not being a slave to principles or conventions.",
+  <>
+    A lot of other things, some of which I've written about{" "}
+    <Link to="/archive">here</Link>.
+  </>,
 ]
 
 const jobs = [
@@ -75,7 +79,7 @@ const WorkHistoryItem = ({ job }) => (
       }}
     >
       <h3>{job.orgName}</h3>
-      <hr style={{ flexGrow: 1 }} />
+      <hr style={{ flexGrow: 1, margin: "auto 1em", paddingTop: "0.4em" }} />
       <div>
         {job.startYear} to {job.endYear}
       </div>
@@ -89,7 +93,7 @@ const WorkHistoryItem = ({ job }) => (
 )
 
 const IndexPage = () => (
-  <Layout showHeader={false} style={{ paddingTop: "1em" }}>
+  <Layout showFooter={false}>
     <SEO title="Home" />
 
     <img
