@@ -41,9 +41,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {}, // additional data can be passed via context
     })
   })
-
-  createPage({
-    path: "/writing",
-    component: markdownPageTemplate,
-  })
 }
