@@ -5,10 +5,9 @@ import Layout from "../components/layout"
 
 export default function Archive({ data }) {
   return (
-    <Layout showFooter={false}>
-      <SEO title="Archive of Writings" />
-
-      <h1>Archive of Writings</h1>
+    <Layout>
+      <SEO title="Writing Archive" />
+      <h1>Writing Archive</h1>
 
       <ul className="six-point-star-bullet">
         {data.allMarkdownRemark.edges.map(({ node }) => (

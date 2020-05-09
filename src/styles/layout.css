@@ -45,15 +45,14 @@ hr {
   border-bottom: 2px dashed #999;
 }
 
-/* HEADER */
+/* FOOTER */
 
-header {
+footer {
   padding: 1em 0;
 }
 
-header a {
-  text-decoration: none;
-  color: black;
+footer > hr {
+  border-style: solid;
 }
 
 /* CONTENT */

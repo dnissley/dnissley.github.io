@@ -28,10 +28,6 @@ const principles = [
   "Writing code that blends in to it's natural environment.",
   "... And then evolving that environment.",
   "Not being a slave to principles or conventions.",
-  <>
-    A lot of other things, some of which I've written about{" "}
-    <Link to="/archive">here</Link>.
-  </>,
 ]
 
 const jobs = [
@@ -92,7 +88,7 @@ const WorkHistoryItem = ({ job }) => (
   </li>
 )
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout showFooter={false}>
     <SEO title="Home" />
 
@@ -113,6 +109,19 @@ const IndexPage = () => (
       <li>Location: Chicago, IL</li>
     </ul>
 
+    <h2 style={{ marginTop: "2em" }}>Recent Writing</h2>
+    <ul className="six-point-star-bullet">
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <li>
+          {node.frontmatter.date} -{" "}
+          <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
+        </li>
+      ))}
+      <li>
+        See more in the <Link to="/archive">archive</Link>
+      </li>
+    </ul>
+
     <h2 style={{ marginTop: "2em" }}>What I'm About</h2>
     <ul className="six-point-star-bullet">
       {principles.map(p => (
@@ -130,3 +139,22 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 3
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`
