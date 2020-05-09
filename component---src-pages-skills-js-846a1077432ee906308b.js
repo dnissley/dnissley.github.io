@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{VfgA:function(e,t,l){"use strict";l.r(t);var a=l("q1tI"),n=l.n(a),r=l("Bl7J"),i=l("vrFN");t.default=function(){return n.a.createElement(r.a,null,n.a.createElement(i.a,{title:"Skills"}),n.a.createElement("h1",null,"Skills"),n.a.createElement("p",null,"I want to put a matrix of skills here. Someday."))}}}]);
+//# sourceMappingURL=component---src-pages-skills-js-846a1077432ee906308b.js.map

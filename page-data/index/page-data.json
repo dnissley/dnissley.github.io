@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"pageContext":{}}}
+{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"date":"May 09, 2020","path":"/writing/test","title":"Some Title"}}},{"node":{"frontmatter":{"date":"May 08, 2020","path":"/writing/test2","title":"Some Title"}}}]}},"pageContext":{}}}
