@@ -80,7 +80,7 @@ const WorkHistoryItem = ({ job }) => (
         {job.startYear} to {job.endYear}
       </div>
     </div>
-    <ul className="fancy-bullet" style={{ padding: "0.5em 0em" }}>
+    <ul className="arrowhead-bullet" style={{ padding: "0.5em 0em" }}>
       {job.description.map(bullet => (
         <li>{bullet}</li>
       ))}
@@ -99,7 +99,7 @@ const IndexPage = () => (
     />
 
     <h1>Dylan Nissley - Software Engineer</h1>
-    <ul className="fleur-bullet">
+    <ul className="four-point-star-bullet">
       <li>
         Email: <a href={`mailto:${email}`}>{email}</a>
       </li>
@@ -110,7 +110,7 @@ const IndexPage = () => (
     </ul>
 
     <h2 style={{ marginTop: "2em" }}>What I'm About</h2>
-    <ul className="star-bullet">
+    <ul className="six-point-star-bullet">
       {principles.map(p => (
         <li>{p}</li>
       ))}
