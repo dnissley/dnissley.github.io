@@ -11,9 +11,17 @@ export default function Template({
   return (
     <Layout>
       <SEO title={frontmatter.title} />
+      <div style={{ display: "flex", alignItems: "baseline" }}>
+        <h1>{frontmatter.title}</h1>
+        <hr
+          style={{
+            flexGrow: 1,
+            margin: "0 0.5em",
+          }}
+        />
+        <div>{frontmatter.date}</div>
+      </div>
 
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )

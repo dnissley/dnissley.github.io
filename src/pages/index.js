@@ -70,12 +70,16 @@ const WorkHistoryItem = ({ job }) => (
     <div
       style={{
         display: "flex",
-        justifyContent: "flex-start",
         alignItems: "baseline",
       }}
     >
       <h3>{job.orgName}</h3>
-      <hr style={{ flexGrow: 1, margin: "auto 1em", paddingTop: "0.4em" }} />
+      <hr
+        style={{
+          flexGrow: 1,
+          margin: "0 0.5em",
+        }}
+      />
       <div>
         {job.startYear} to {job.endYear}
       </div>

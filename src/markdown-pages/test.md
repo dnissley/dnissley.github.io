@@ -9,8 +9,13 @@ Some shit
 
     code??
     how bout it?
-    1234
-    test()
+      1234
+    test() {
+      hi;
+      if (testy) {
+        console.log('hi');
+      }
+    }
     bla
 
 how [bout](/) a list?
@@ -19,4 +24,4 @@ how [bout](/) a list?
 - there
 - aaa
 
-*fin* or _fin_ or _*fin*_?
+**fin** or _fin_ or _**fin**_?

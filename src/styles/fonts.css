@@ -29,3 +29,8 @@
   font-family: "Crimson Text";
   src: url("../fonts/CrimsonText-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../fonts/RobotoMono-Regular.ttf")
+}
